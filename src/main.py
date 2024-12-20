@@ -11,7 +11,7 @@ def run_random_agent(episodes = 10):
         state = env.reset()[0]
         total_reward = 0
         done = False
-        truncated = False
+        truncated = False # Time limit
 
         # Run the simulation until the episode is finished or truncated
         while not (done or truncated):
