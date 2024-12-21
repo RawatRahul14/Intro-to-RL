@@ -27,21 +27,21 @@ A value function **estimates the expected return (cumulative reward)** starting 
 
 **Types of Value Functions:**
 
-- State-Value Function ($V^\pi(s)$):
+- State-Value Function $(V^\pi(s))$:
     - The value of a state s under a policy $\pi$ is the expected cumulative reward the agent can achieve starting from s and following $\pi$:
     ![alt text](images/image6.png)
     - Where Gt is the return:
     ![alt text](images/image7.png)
 
     **Interpretation:**
-    ($V^\pi(s)$) tells us how "good" it is to be in state s if the agent follows policy $\pi$.
+    $(V^\pi(s))$ tells us how "good" it is to be in state s if the agent follows policy $\pi$.
 
-- Action-Value Function ($Q^\pi(s, a)$):
+- Action-Value Function $(Q^\pi(s, a))$:
     - The value of taking action a in state s under the policy $\pi$ is the expected cumulative reward.
     ![alt text](images/image8.png)
 
     **Interpretation:**
-    ($Q^\pi(s, a)$) tells us how "good" it is to take action a in state s and follow the policy $\pi$.
+    $(Q^\pi(s, a))$ tells us how "good" it is to take action a in state s and follow the policy $\pi$.
 
 3. Relationship between Policies and Value Functions
 
