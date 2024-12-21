@@ -39,15 +39,11 @@ For the optimal value functions, the **Bellman** equations become:
 
 **For $V^*(s)$:**
 
-$$
-V^*(s) = \max_a \sum_{s'} P (s' | s, a)[R(s, a) + \gamma V^*(s')]
-$$
+$$V^*(s) = \max_a \sum_{s'} P (s' | s, a)[R(s, a) + \gamma V^*(s')]$$
 
 **For $Q^*(s, a)$:**
 
-$$
-Q^*(s, a) = \sum_{s'}P(s'|s, a)[R(s, a) + \gamma \max_{a'} Q^*(s'|a')]
-$$
+$$Q^*(s, a) = \sum_{s'}P(s'|s, a)[R(s, a) + \gamma \max_{a'} Q^*(s'|a')]$$
 
 These equations are central to algorithms like **Value Iteration** and **Q-Learning**.
 
