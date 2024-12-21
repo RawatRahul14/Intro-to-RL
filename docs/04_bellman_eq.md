@@ -45,7 +45,7 @@ $$
 V^*(s) = \max_a \sum_{s'} P (s' | s, a)[R(s, a) + \gamma V^*(s')]
 $$
 
-**For $Q^*(s, a)$:**
+For $Q^*(s, a)$:
 
 $$
 Q^*(s, a) = \sum_{s'}P(s'|s, a)[R(s, a) + \gamma \max_{a'} Q^*(s'|a')]
