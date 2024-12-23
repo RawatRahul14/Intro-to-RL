@@ -67,7 +67,9 @@ An MDP is defined by five components:
 The objective of the agent in an MDP is to maximize the total reward (called the return) over time.
 The return is defined as:
 
-![alt text](images/image.png)
+$$
+G_{t} = R_{t+1} + \gamma R_{t+2} + \gamma ^ 2 R_{t+3} + \dots = \sum_{k=0}^\infty \gamma^k R_{t+k+1}
+$$
 
 Where:
 - R(t+1) : Reward received after the first action.
@@ -110,13 +112,17 @@ To solve an MDP, an agent must learn:
 
     The expected return starting from state s.
 
-    ![alt text](images/image2.png)
+$$
+V(s) = E_\pi [G_t|s_t = s]
+$$
 
 - **Action-Value Function (Q(s, a)):**
     
     The expected return starting from state s, taking action a, and following the policy thereafter.
 
-    ![alt text](images/image3.png)
+$$
+Q(s, a) = E_\pi [G_t|s_t = s, a_t = a]
+$$
 
 The agent can then use algorithms like **Dynamic Programming, Monte Carlo,** or **Temporial Difference Learnging** to compute these functions.
 

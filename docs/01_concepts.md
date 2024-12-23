@@ -64,7 +64,9 @@ An MDP is defined by the following components:
 ## The Goal of Reinforcement Learning
 The objective of an RL agent is to find an optimal policy (π*) that maximizes the expected cumulative reward (or return). The return Gt at time step t is given by:
 
-![alt text](images/image.png)
+$$
+G_{t} = R_{t+1} + \gamma R_{t+2} + \gamma ^ 2 R_{t+3} + \dots = \sum_{k=0}^\infty \gamma^k R_{t+k+1}
+$$
 
 **Where**: 
 - R(t+k+1) is the reward received k steps into the future.
