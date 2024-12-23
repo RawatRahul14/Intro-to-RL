@@ -12,7 +12,7 @@ This method computes the **state-value function** ($V^\pi(s)$) for a given polic
 - Start wuth an initial value function $V(s) = 0$ for all states.
 - Update $V(s)$ iteratively using the Bellman Equation for policy evaluation:
 $$
-V^\pi <- \sum_a \pi(a|s) \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V^\pi(s')]
+V^\pi := \sum_a \pi(a|s) \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V^\pi(s')]
 $$
 - Repeat until convergence ($\Delta < \theta$, where $\Delta$ is the maximum change in $V(s)$).
 
@@ -22,6 +22,7 @@ This method improves the policy by acting greedily with respect to the current v
 
 **Algorithm:**
 - For each state s, update the policy to:
+
 $$
 \pi'(s) = arg \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V(s')]
 $$
@@ -39,17 +40,19 @@ Policy Iteration alternates between **Policy Evaluation** and **Policy Iteration
 4. **Value Iteration**
 
 Value Iteration directly finds the optimal value function $V ^\star(s)$ by iteratively applying the **Bellman Optimality Equation:**
+
 $$
 V ^\star(s) = \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V ^\star(s')]
 $$
+
 **Algorithm**
 - Starts with $V(s) = 0$ for all states.
 - Update $V(s)$ for all states using:
 $$
-V(s) <- \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V(s')]
+V(s) := \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V(s')]
 $$
 - Repeat until convergence.
 
 Below is the Maze tha have been used in the coding part:
 
-![Diagram Description](docs\path.drawio.svg)
+![Diagram Description](path.drawio.svg)
