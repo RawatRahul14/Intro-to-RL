@@ -112,17 +112,17 @@ To solve an MDP, an agent must learn:
 
     The expected return starting from state s.
 
-$$
-V(s) = E_\pi [G_t|s_t = s]
-$$
+    $$
+    V(s) = E_\pi [G_t|s_t = s]
+    $$
 
 - **Action-Value Function (Q(s, a)):**
     
     The expected return starting from state s, taking action a, and following the policy thereafter.
 
-$$
-Q(s, a) = E_\pi [G_t|s_t = s, a_t = a]
-$$
+    $$
+    Q(s, a) = E_\pi [G_t|s_t = s, a_t = a]
+    $$
 
 The agent can then use algorithms like **Dynamic Programming, Monte Carlo,** or **Temporial Difference Learnging** to compute these functions.
 

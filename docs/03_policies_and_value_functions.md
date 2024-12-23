@@ -11,18 +11,18 @@ A policy defines the agent's behaviour: it is a **mapping from states to actions
 - Deterministic Policy:
     - A deterministic policy maps a state to a specific action:
 
-$$
-\pi(s) = a
-$$
+    $$
+    \pi(s) = a
+    $$
 
     - Example: If the agent is in a state s, it always chooses action a.
 
 - Stochastic Policy:
     - A stochastic policy defines the probabilities of taking each action in a given state:
 
-$$
-\pi(a|s) = P(a, s)
-$$
+    $$
+    \pi(a|s) = P(a, s)
+    $$
 
     - Example: If the agent is in state s, it chooses action a with a certain probability.
 
@@ -38,15 +38,15 @@ A value function **estimates the expected return (cumulative reward)** starting 
 - State-Value Function $(V^\pi(s))$:
     - The value of a state s under a policy $\pi$ is the expected cumulative reward the agent can achieve starting from s and following $\pi$:
 
-$$
-V^\pi(s) = E_\pi[G_t|s_t = s]
-$$
+    $$
+    V^\pi(s) = E_\pi[G_t|s_t = s]
+    $$
 
     - Where Gt is the return:
 
-$$
-G_t = R_{t+1} + \gamma R_{t+2} + \gamma ^ 2 R_{t+3} + \dots
-$$
+    $$
+    G_t = R_{t+1} + \gamma R_{t+2} + \gamma ^ 2 R_{t+3} + \dots
+    $$
 
     **Interpretation:**
     $(V^\pi(s))$ tells us how "good" it is to be in state s if the agent follows policy $\pi$.
@@ -54,9 +54,9 @@ $$
 - Action-Value Function $(Q^\pi(s, a))$:
     - The value of taking action a in state s under the policy $\pi$ is the expected cumulative reward.
 
-$$
-Q^\pi(s, a) = E_\pi [G_t|s_t = s, a_t = a]
-$$
+    $$
+    Q^\pi(s, a) = E_\pi [G_t|s_t = s, a_t = a]
+    $$
 
     **Interpretation:**
     $(Q^\pi(s, a))$ tells us how "good" it is to take action a in state s and follow the policy $\pi$.
@@ -71,16 +71,16 @@ The value function depends on the policy:
 - Optimal State-Value Function $(V^*(s))$:
     - The maximum value achievable in state s, over all the possible policies:
 
-$$
-V^\star(s) = max_\pi V^\pi(s)
-$$
+    $$
+    V^\star(s) = max_\pi V^\pi(s)
+    $$
 
 - Optimal Action-Value Function $(Q^*(s, a))$:
     - The maximum value achievable by taking action a in state a and then acting optimally:
 
-$$
-Q^\star(s, a) = max_\pi Q^\pi(s, a)
-$$
+    $$
+    Q^\star(s, a) = max_\pi Q^\pi(s, a)
+    $$
 
 **Finding the Optimal Policy:**
 - The optimal policy $\pi^*$ chooses actions that maximize the optimal value functions:
