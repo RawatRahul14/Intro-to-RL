@@ -11,9 +11,11 @@ This method computes the **state-value function** ($V^\pi(s)$) for a given polic
 **Algorithm:**
 - Start wuth an initial value function $V(s) = 0$ for all states.
 - Update $V(s)$ iteratively using the Bellman Equation for policy evaluation:
+
 $$
-V^\pi := \sum_a \pi(a|s) \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V^\pi(s')]
+V^\pi = \sum_a \pi(a|s) \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V^\pi(s')]
 $$
+
 - Repeat until convergence ($\Delta < \theta$, where $\Delta$ is the maximum change in $V(s)$).
 
 2. **Policy Improvement**
@@ -48,11 +50,13 @@ $$
 **Algorithm**
 - Starts with $V(s) = 0$ for all states.
 - Update $V(s)$ for all states using:
+
 $$
-V(s) := \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V(s')]
+V(s) = \max_a \sum_{s'} P(s'|s, a)[R(s, a) + \gamma V(s')]
 $$
+
 - Repeat until convergence.
 
 Below is the Maze tha have been used in the coding part:
 
-![Diagram Description](path.drawio.svg)
+![Diagram Description](../docs/images/image12.png)
